@@ -5,59 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Email Verified | Maestro</title>
     <style>
+      :root {
+        --text-color: #333;
+        --bg-light: #f0f2f5;
+        --bg-white: #fff;
+        --font-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+          Arial, sans-serif;
+      }
+
       body {
         margin: 0;
-        padding: 0;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans",
-          Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-        /* color: #fafafa; */
-        background-color: #f0f2f5;
+        padding: 20px;
+        background-color: var(--bg-light);
         display: flex;
         justify-content: center;
         align-items: center;
         height: 100vh;
+        font-family: var(--font-base);
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+        font-size: 16px;
+        line-height: 1.7;
+        color: var(--text-color);
       }
 
       .container {
-        background-color: #ffffff;
+        background-color: var(--bg-white);
         padding: 40px;
-        border-radius: 8px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        text-align: center;
+        border-radius: 12px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
         max-width: 400px;
-        width: 90%;
+        width: 100%;
+        text-align: center;
       }
 
       .container img {
         width: 80px;
         height: 80px;
         object-fit: contain;
-        margin-bottom: 20px;
+        display: block;
+        margin: 0 auto 24px;
       }
 
-      .container h1 {
+      h1 {
         font-size: 24px;
-        margin: 0 0 10px;
-        color: #333;
+        margin-bottom: 12px;
+        color: var(--text-color);
+        text-align: center;
       }
 
-      .container p {
-        font-size: 16px;
-        color: #666;
-        margin: 0;
+      p {
+        margin-bottom: 16px;
+      }
+
+      @media (max-width: 600px) {
+        .container {
+          padding: 24px;
+        }
+
+        h1 {
+          font-size: 20px;
+        }
       }
     </style>
-    <script>
-      // window.onload = function () {
-      //   setTimeout(function () {
-      //     window.close();
-      //   }, 1000); // Close after 1 second
-      // };
-    </script>
   </head>
   <body>
     <div class="container">
       <img src="./assets//app-icon.png" alt="Maestro Invoice" />
+
       <h1>Email Verified</h1>
       <p>
         Your email address has been successfully verified. You can now close
